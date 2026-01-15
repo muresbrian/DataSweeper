@@ -6,7 +6,7 @@ import io
 st.set_page_config(page_title="Barredora", page_icon="🧹", layout="wide")
 
 # Título
-st.title("🧹 Limpiador de Datos Pro")
+st.title("🧹 Limpiador de Duplicados")
 st.markdown("Sube tus archivos CSV o Excel para limpiarlos automáticamente.")
 
 # Función para cargar datos
@@ -67,7 +67,7 @@ if uploaded_file is not None:
 
             # Resultados
             st.divider()
-            st.success("✅ ¡Datos limpiados exitosamente!")
+            st.success("✅ ¡Duplicados eliminados con éxito!")
             
             cleaned_rows = df_cleaned.shape[0]
             rows_removed = original_rows - cleaned_rows
@@ -95,3 +95,4 @@ if uploaded_file is not None:
                 file_name=f"cleaned_{uploaded_file.name.rsplit('.', 1)[0]}.csv",
                 mime="text/csv"
             )
+
